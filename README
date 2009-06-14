@@ -1,0 +1,30 @@
+euler-clojure
+-------------
+
+by Daniel F. Martins <daniel.tritone@gmail.com>
+
+
+This repository provides my solutions to Project Euler's problems using
+Clojure, a Lispy JVM-based functional language.
+
+
+1. Requirements
+
+* JDK 1.5+;
+* Clojure, latest svn trunk version;
+* Clojure-contrib, latest svn trunk version;
+
+
+2. Running
+
+Using the terminal, go to the project's root directory and run the following
+command line:
+
+    $ clj euler/problem_X.clj
+
+Where X is the problem id.
+
+
+3. Notice
+
+Don't expect me to publish solutions to all Project Euler's problems! :-)
