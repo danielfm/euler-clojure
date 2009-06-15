@@ -1,5 +1,4 @@
-(ns euler.problem-14
-  (:use [clojure.contrib.lazy-seqs :only (primes)]))
+(ns euler.problem-14)
 
 ; A smaller and beautiful solution takes ~1.2 min to run, but this
 ; one takes only ~15 sec
