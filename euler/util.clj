@@ -15,6 +15,10 @@
   "Calculates the factorial of n."
   (reduce * (range 2 (+ n 1))))
 
+(defn kcomb [n k]
+  "Returns the number of k-combinations from a set with n elements."
+  (/ (fact n) (* (fact k) (fact (- n k)))))
+
 (defn to-int [o]
   "Converts the object o to int."
   (Integer/parseInt (str o)))
