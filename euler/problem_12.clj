@@ -10,4 +10,5 @@
   "Returns the value of the first triangle number to have over five hundred divisors."
   (first (filter #(> (divisors %) 500) triangle-numbers)))
 
+; Expected result: 76576500
 (println (solve))

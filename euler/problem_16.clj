@@ -6,4 +6,5 @@
   "Returns the sum of the digits of the number 2^1000."
   (reduce + (map to-int (str (expt 2 1000)))))
 
+; Expected result: 1366
 (println (solve))

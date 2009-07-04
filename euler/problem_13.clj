@@ -9,4 +9,5 @@
   "Returns the first ten digits of the sum of the following one-hundred 50-digit numbers."
   (apply str (take 10 (str (reduce + (load-input f))))))
 
+; Expected result: 5537376230
 (println (solve "euler/input/problem_13.txt"))

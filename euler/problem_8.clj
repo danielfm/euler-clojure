@@ -9,4 +9,5 @@
   "Returns the greatest product of five consecutive digits in the 1000-digit number"
   (apply max (map #(reduce * %) (partition 5 1 (load-input f)))))
 
+; Expected result: 40824
 (println (solve "euler/input/problem_8.txt"))

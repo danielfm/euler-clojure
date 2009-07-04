@@ -6,4 +6,5 @@
   (let [dim 20]
     (k-comb (* dim 2) dim)))
 
+; Expected result: 137846528820
 (println (solve))

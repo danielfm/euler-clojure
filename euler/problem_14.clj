@@ -24,4 +24,5 @@
 	  (recur (dec n) n c)
 	  (recur (dec n) m lc))))))
 
+; Expected result: 837799
 (println (solve))

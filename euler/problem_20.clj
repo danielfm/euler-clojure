@@ -5,4 +5,5 @@
   "Find the sum of digits in 100!"
   (reduce + (map to-int (str (fact 100)))))
 
+; Expected result: 648
 (println (solve))

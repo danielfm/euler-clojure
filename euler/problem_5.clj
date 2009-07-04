@@ -5,4 +5,5 @@
   "Returns the smallest number that is evenly divisible by all of the numbers from 1 to 20?"
   (reduce lcm (range 1 21)))
 
+; Expected result: 232792560
 (println (solve))

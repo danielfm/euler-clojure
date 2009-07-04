@@ -21,4 +21,5 @@
 	     (apply * (for [coord (calculate-coords [x y] t 4 s)]
 			(reduce nth grid coord)))))))
 
+; Expected result: 70600674
 (println (solve "euler/input/problem_11.txt"))

@@ -14,4 +14,5 @@
   (let [coll (range 1 101)]
     (- (square-of-the-sum coll) (sum-of-squares coll))))
 
+; Expected result: 25164150
 (println (solve))

@@ -8,4 +8,5 @@
   "Finds the sum of all the multiples of 3 or 5 below 1000."
   (reduce + (filter (partial multiple-of-any? [3 5]) (range 1000))))
 
+; Expected result: 233168
 (println (solve))

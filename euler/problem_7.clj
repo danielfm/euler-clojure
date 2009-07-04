@@ -5,4 +5,5 @@
   "Returns the 1001st prime number."
   (nth primes 10000))
 
+; Expected result: 104743
 (println (solve))

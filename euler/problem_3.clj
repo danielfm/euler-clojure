@@ -10,4 +10,5 @@
 	i
 	(recur (dec i))))))
 
+; Expected result: 6857
 (println (solve))

@@ -5,4 +5,5 @@
   "Finds the sum of all the even-valued terms in the Fibbonacci sequence which do not exceed four million."
   (reduce + (filter even? (take-while #(<= % 4000000) (fibs)))))
 
+; Expected result: 4613732
 (println (solve))

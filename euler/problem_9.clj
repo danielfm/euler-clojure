@@ -6,4 +6,5 @@
 	       :when (= (+ (* a a) (* b b)) (* c c))]
 	   (* a b c))))
 
+; Expected result: 31875000
 (println (solve))

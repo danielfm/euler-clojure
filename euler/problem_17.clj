@@ -26,4 +26,5 @@
   "Returns the number of letters used to write in words all the numbers from 1 to 1000."
   (reduce + (map count (map n-in-words (range 1 1001)))))
 
+; Expected result: 21124
 (println (solve))
