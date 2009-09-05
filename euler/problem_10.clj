@@ -3,7 +3,7 @@
 
 (defn solve []
   "Finds the sum of all the primes below two million."
-  (reduce + (take-while #(< % 2000000) (filter prime? (iterate inc 1)))))
+  (reduce + (take-while #(< % (int 2e6)) (filter prime? (iterate inc 1)))))
 
 ; Expected result: 142913828922
 (println (solve))
