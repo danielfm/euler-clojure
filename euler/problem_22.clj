@@ -12,4 +12,5 @@
   "Finds the total of all the name scores in the file f."
   (reduce + (map score (load-input f))))
 
+; Expected result: 871198282
 (println (solve "euler/input/problem_22.txt"))
