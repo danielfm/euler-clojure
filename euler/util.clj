@@ -2,10 +2,19 @@
   (:use [clojure.contrib.def :only (defvar)]
 	[clojure.contrib.math :only (sqrt)]))
 
-(defn divisors [n]
+(defn count-divisors [n]
   "Calculates the number of divisors of the natural number n."
   (let [x (long n)]
     (* 2 (count (filter #(zero? (rem x %)) (range 1 (sqrt x)))))))
+
+(defn divisors [n]
+  "Returns the divisors of the natural number n."
+  (let [x (long n)]
+    (filter #(zero? (rem x %)) (range 1 x))))
+
+(defn sum-divisors [n]
+  "Sums the divisors of the natural number n."
+  (reduce + (divisors n)))
 
 (defn prime? [n]
   "Checks whether the natural number n is prime."

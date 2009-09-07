@@ -1,12 +1,9 @@
-(ns euler.problem-21)
-
-(defn sum-of-divisors [n]
-  "Returns the divisors of n."
-  (reduce + (filter #(zero? (rem n %)) (range 1 n))))
+(ns euler.problem-21
+  (:use [euler.util :only (sum-divisors)]))
 
 (defn amicable [n]
   "Returns whether n is an amicable number."
-  (let [a (sum-of-divisors n) b (sum-of-divisors a)]
+  (let [a (sum-divisors n) b (sum-divisors a)]
     (and (not= n a) (= n b))))
 
 (defn solve [n]

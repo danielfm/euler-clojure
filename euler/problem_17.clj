@@ -14,8 +14,8 @@
 (defn n-in-words [n]
   "Returns a description in words of the natural number n (between 1 and 1000)."
   (cond
-   (< n 20) (nth one-to-nineteen n)
-   (< n 100) (str (nth twenty-to-ninety (- (quot n 10) 2))
+   (< n 20) (one-to-nineteen n)
+   (< n 100) (str (twenty-to-ninety (- (quot n 10) 2))
 		  (n-in-words (rem n 10)))
    (< n 1000) (str (n-in-words (quot n 100)) "hundred"
 		   (if (zero? (rem n 100)) ""
