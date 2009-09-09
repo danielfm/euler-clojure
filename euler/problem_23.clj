@@ -1,6 +1,5 @@
 (ns euler.problem-23
-  (:use [euler.util :only (sum-proper-divisors)]
-	[clojure.contrib.def :only (defvar)]))
+  (:use [euler.util :only (sum-proper-divisors)]))
 
 (defn abundant? [n]
   "Returns whether n is abundant."
