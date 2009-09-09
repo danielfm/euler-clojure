@@ -12,7 +12,7 @@
 (defn solve []
   "Returns the sum of all the positive integers which cannot be written as the sum of two abundant numbers."
   (let [rng (range 1 28123) elegible (into #{} (filter abundant? rng))]
-    (reduce + (filter (complement (partial sum-of-abundants? elegible)) rng))))
+    (reduce + (filter (partial (complement sum-of-abundants?) elegible) rng))))
 
 ; Expected result: 4179871
 (println (solve))
