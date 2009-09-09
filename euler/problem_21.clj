@@ -1,9 +1,9 @@
 (ns euler.problem-21
-  (:use [euler.util :only (sum-divisors)]))
+  (:use [euler.util :only (sum-proper-divisors)]))
 
 (defn amicable [n]
   "Returns whether n is an amicable number."
-  (let [a (sum-divisors n) b (sum-divisors a)]
+  (let [a (sum-proper-divisors n) b (sum-proper-divisors a)]
     (and (not= n a) (= n b))))
 
 (defn solve [n]
@@ -12,3 +12,4 @@
 
 ; Expected result: 31626
 (println (solve 10000))
+

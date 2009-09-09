@@ -1,20 +1,27 @@
 (ns euler.util
   (:use [clojure.contrib.def :only (defvar)]
 	[clojure.contrib.math :only (sqrt)]))
-
-(defn count-divisors [n]
-  "Calculates the number of divisors of the natural number n."
+ 
+(defn count-proper-divisors [n]
+  "Counts the proper divisors of the natural number n."
   (let [x (long n)]
-    (* 2 (count (filter #(zero? (rem x %)) (range 1 (sqrt x)))))))
+    (inc (* 2 (count (filter #(zero? (rem x %)) (range 2 (sqrt x))))))))
 
-(defn divisors [n]
-  "Returns the divisors of the natural number n."
+(defn proper-divisors [n]
+  "Returns the proper divisors of the natural number n."
   (let [x (long n)]
-    (filter #(zero? (rem x %)) (range 1 x))))
+    (cons 1 (filter #(zero? (rem x %)) (range 2 x)))))
 
-(defn sum-divisors [n]
-  "Sums the divisors of the natural number n."
-  (reduce + (divisors n)))
+(defn sum-proper-divisors [n]
+  "Sums the proper divisors of the natural number n."
+  (let [limit (sqrt n)]
+    (loop [i 2
+	   sum 1]
+      (cond
+	(= i limit) (+ i sum)
+	(> i limit) sum
+	(zero? (rem n i)) (recur (inc i) (+ sum i (/ n i)))
+	true              (recur (inc i) sum)))))
 
 (defn prime? [n]
   "Checks whether the natural number n is prime."
