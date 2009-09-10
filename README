@@ -1,18 +1,24 @@
 euler-clojure
 -------------
 
-by Daniel F. Martins <daniel.tritone@gmail.com>
+by Daniel F. Martins <daniel.tritone at gmail dot com>
 
 
 This repository provides my solutions to Project Euler's problems using
-Clojure, a Lispy JVM-based functional language.
+Clojure[1], a Lispy JVM-based functional language.
+
+Project Euler[2] is a series of challenging mathematical/computer programming
+problems that will require more than just mathematical insights to solve.
+Although mathematics will help you arrive at elegant and efficient methods,
+the use of a computer and programming skills will be required to
+solve most problems.
 
 
 1. Requirements
 
 * JDK 1.5+;
-* Clojure, latest svn trunk version;
-* Clojure-contrib, latest svn trunk version;
+* Clojure, git version[3];
+* Clojure-Contrib, git version[4];
 
 
 2. Running
@@ -28,3 +34,12 @@ Where X is the problem id.
 3. Notice
 
 Don't expect me to publish solutions to all Project Euler's problems! :-)
+
+
+4. Links
+
+[1] Clojure             - http://clojure.org
+[2] Project Euler       - http://projecteuler.net
+[3] Clojure git         - http://github.com/richhickey/clojure/tree
+[4] Clojure-Contrib git - http://github.com/richhickey/clojure-contrib/tree
+
