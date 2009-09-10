@@ -4,13 +4,11 @@
  
 (defn count-proper-divisors [n]
   "Counts the proper divisors of the natural number n."
-  (let [x (long n)]
-    (inc (* 2 (count (filter #(zero? (rem x %)) (range 2 (sqrt x))))))))
+  (inc (* 2 (count (filter #(zero? (rem n %)) (range 2 (sqrt n)))))))
 
 (defn proper-divisors [n]
   "Returns the proper divisors of the natural number n."
-  (let [x (long n)]
-    (cons 1 (filter #(zero? (rem x %)) (range 2 x)))))
+  (cons 1 (filter #(zero? (rem n %)) (range 2 n))))
 
 (defn sum-proper-divisors [n]
   "Sums the proper divisors of the natural number n."
@@ -29,7 +27,7 @@
 
 (defn fact [n]
   "Calculates the factorial of n."
-  (reduce * (range 2 (+ n 1))))
+  (reduce * (range 2 (inc n))))
 
 (defn k-comb [n k]
   "Returns the number of k-combinations from a set with n elements."
