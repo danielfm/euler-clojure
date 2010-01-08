@@ -2,14 +2,14 @@
   (:use [clojure.contrib.math :only (expt)]))
 
 (defn mult-order [n]
-  "Calculates the multiplicative order of the irrational number n."
+  "Calculates the multiplicative order of the irrational number 1/n."
   (loop [i 1]
     (if (= (mod (expt 10 i) n) 1)
       i
       (recur (inc i)))))
 
 (defn count-cycles [n]
-  "Counts the number of decimal cycles of n."
+  "Counts the number of decimal cycles of 1/n."
   (cond
     (= 1 n) 0
     (zero? (rem n 2)) (count-cycles (/ n 2))
