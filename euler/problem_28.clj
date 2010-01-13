@@ -10,4 +10,4 @@
   (reduce + (map sum-diagonals (range 1 1002 2))))
 
 ; Expected result: 669171001
-(time (println (solve)))
+(println (solve))
