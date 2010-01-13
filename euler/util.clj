@@ -25,8 +25,12 @@
   "Checks whether the natural number n is prime."
   (.isProbablePrime (bigint n) 10))
 
+(defn abs [n]
+  "Returns the absolute value of n, or |n|."
+  (Math/abs n))
+
 (defn fact [n]
-  "Calculates the factorial of n."
+  "Calculates the factorial of n, or n!."
   (reduce * (range 2 (inc n))))
 
 (defn k-comb [n k]
