@@ -1,14 +1,10 @@
 (ns euler.problem-27
-  (:use [clojure.contrib.math :only (expt)]
-	[clojure.contrib.lazy-seqs :only (primes)]
+  (:use [clojure.contrib.lazy-seqs :only (primes)]
 	[euler.util :only (prime? abs)]))
 
 (defn prime-count [a b]
   "Counts the consecutive primes of a quadratic expression in terms of a and b."
-  (loop [n 0]
-    (if-not (prime? (+ (expt n 2) (* a n) b))
-      n
-      (recur (inc n)))))
+  (count (take-while #(prime? (+ (* % %) (* a %) b)) (iterate inc 0))))
 
 (defn solve[]
   "Finds the product of the coefficients for the quadratic expression that"
