@@ -17,7 +17,8 @@
     :else (mult-order n)))
 
 (defn solve []
-  "Finds d < 1000 for which 1/d contains the longest recurring cycle in its decimal fraction part."
+  "Finds d < 1000 for which 1/d contains the longest recurring cycle in its
+decimal fraction part."
   (let [n (range 2 1000)
 	c (map count-cycles n)]
     ((zipmap c n) (apply max c))))

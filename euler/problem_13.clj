@@ -6,7 +6,8 @@
   (map bigint (re-split #"\n" (slurp f))))
 
 (defn solve [f]
-  "Returns the first ten digits of the sum of the following one-hundred 50-digit numbers."
+  "Returns the first ten digits of the sum of the following one-hundred 50-digit
+numbers."
   (apply str (take 10 (str (reduce + (load-input f))))))
 
 ; Expected result: 5537376230

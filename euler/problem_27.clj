@@ -7,8 +7,8 @@
   (count (take-while #(prime? (+ (* % %) (* a %) b)) (iterate inc 0))))
 
 (defn solve[]
-  "Finds the product of the coefficients for the quadratic expression that"
-  "produces the maximum number of primes for consecutive values of n."
+  "Finds the product of the coefficients for the quadratic expression that
+produces the maximum number of primes for consecutive values of n."
   (let [c (for [b (take-while #(< % 1000) primes)
 		a (filter odd? (range (- b) 1000))]
 	    [(prime-count a b) (* a b)])

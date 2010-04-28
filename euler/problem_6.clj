@@ -10,7 +10,8 @@
   (expt (reduce + coll) 2))
 
 (defn solve []
-  "Returns the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum."
+  "Returns the difference between the sum of the squares of the first one
+hundred natural numbers and the square of the sum."
   (let [coll (range 1 101)]
     (- (square-of-the-sum coll) (sum-of-squares coll))))
 

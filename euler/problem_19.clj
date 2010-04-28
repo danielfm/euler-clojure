@@ -16,7 +16,8 @@
   (iterate inc-month (new-calendar year 1 1)))
 
 (defn solve [from-year to-year]
-  "Finds how many Sundays fell on the first of the month during the twentieth century."
+  "Finds how many Sundays fell on the first of the month during the twentieth
+century."
   (let [date-seq (first-of-month from-year)]
     (count (filter #(= Calendar/SUNDAY (.get % Calendar/DAY_OF_WEEK))
 		   (take-while #(< (.get % Calendar/YEAR) to-year) date-seq)))))

@@ -7,7 +7,8 @@
   "Returns a lazy infinite sequence of triangle numbers.")
 
 (defn solve []
-  "Returns the value of the first triangle number to have over five hundred divisors."
+  "Returns the value of the first triangle number to have over five hundred
+divisors."
   (first (filter #(> (count-proper-divisors %) 500) triangle-numbers)))
 
 ; Expected result: 76576500

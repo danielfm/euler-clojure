@@ -14,7 +14,8 @@
 (def collatz-count (memoize collatz-count))
 
 (defn solve []
-  "Returns the starting number, under one million, which produces the longest chain."
+  "Returns the starting number, under one million, which produces the longest
+chain."
   (loop [n 999999 m 1 lc 0]
     (let [c (collatz-count n)]
       (if (= n 1)
