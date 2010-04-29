@@ -3,7 +3,7 @@
 	[clojure.contrib.math :only (expt)]))
 
 (defn expt-digits? [p n]
-  "Returns wether the number n can be written as the sum of p powers of their
+  "Returns whether the number n can be written as the sum of p powers of their
 digits."
   (when (> n 1)
     (let [d (map to-int (str n))]
