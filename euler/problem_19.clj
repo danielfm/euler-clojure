@@ -22,5 +22,5 @@ century."
     (count (filter #(= Calendar/SUNDAY (.get % Calendar/DAY_OF_WEEK))
 		   (take-while #(< (.get % Calendar/YEAR) to-year) date-seq)))))
 
-; Expected result: 1701
+; Expected result: 171
 (println (solve 1901 2001))

@@ -12,7 +12,7 @@ produces the maximum number of primes for consecutive values of n."
   (let [c (for [b (take-while #(< % 1000) primes)
 		a (filter odd? (range (- b) 1000))]
 	    [(prime-count a b) (* a b)])
-	s (apply hash-map (apply concat c))]
+	s (into {} c)]
     (s (reduce max (keys s)))))
 
 ; Expected result: -59231
